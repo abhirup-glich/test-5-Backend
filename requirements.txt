@@ -1,0 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+Flask
+flask-cors
+psycopg2-binary
+opencv-python-headless
+numpy
+torch
+torchvision
+facenet-pytorch
+tabulate
+supabase
+flask-bcrypt
+flask-jwt-extended
+flask-limiter
+python-dotenv
+flask-smorest
+marshmallow
+pytest
+gunicorn
+firebase-admin

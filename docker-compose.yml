@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build: ./services/auth-service
+    ports:
+      - "5001:5001"
+    deploy:
+      resources:
+        limits:
+          memory: 500M
+    env_file: .env
+    networks:
+      - attendance-net
+
+  attendance-service:
+    build: ./services/attendance-service
+    ports:
+      - "5002:5002"
+    deploy:
+      resources:
+        limits:
+          memory: 500M
+    env_file: .env
+    networks:
+      - attendance-net
+
+  admin-service:
+    build: ./services/admin-service
+    ports:
+      - "5003:5003"
+    deploy:
+      resources:
+        limits:
+          memory: 500M
+    env_file: .env
+    networks:
+      - attendance-net
+
+networks:
+  attendance-net:
+    driver: bridge
